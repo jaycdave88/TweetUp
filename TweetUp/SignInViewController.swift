@@ -27,6 +27,25 @@ class SignInViewController: UIViewController {
 
             if granted{
                 println("Access Granted")
+
+                let allAccount = account.accountsWithAccountType(accountType) // grab all multiple twitter account 
+
+                if allAccount.count > 0{
+                    let twitterAccount = allAccount.last as! ACAccount // grab the last account in the array
+                    let requestApi = NSURL(string: "https://api.twitter.com/1.1/account/verify_credentials.json") // create a constant as an NSURL 
+                    let userRequest = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, URL: requestApi, parameters: nil) // user request saying the requestAPi is a get method 
+                    userRequest.account = twitterAccount
+                    userRequest.performRequestWithHandler({ (response:NSData!, urlResponce : NSHTTPURLResponse!, error:NSError! ) -> Void in
+
+                        var error = NSErrorPointer()
+
+                        let responseDictonary = NSJSONSerialization.JSONObjectWithData(response, options: NSJSONReadingOptions.MutableLeaves, error: error) as! [String : AnyObject]
+
+                        let imageUrl = responseDictonary["profile_image_url_https"] as! String // constant for finding the key and saving it as a string
+
+                    })
+
+                } // end if allAccount
             }else{
                 println("Acess Not Granted")
             }
