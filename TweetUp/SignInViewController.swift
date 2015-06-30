@@ -41,7 +41,17 @@ class SignInViewController: UIViewController {
 
                         let responseDictonary = NSJSONSerialization.JSONObjectWithData(response, options: NSJSONReadingOptions.MutableLeaves, error: error) as! [String : AnyObject]
 
-                        let imageUrl = responseDictonary["profile_image_url_https"] as! String // constant for finding the key and saving it as a string
+                        var imageUrl = responseDictonary["profile_image_url_https"] as! String // constant for finding the key and saving it as a string
+
+                        imageUrl = imageUrl.stringByReplacingOccurrencesOfString("_normal", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+
+                        var imageRequest = NSURLRequest(URL: NSURL(string : imageUrl)!) // creates a NSURL 
+
+                        NSURLConnection.sendAsynchronousRequest(imageRequest, queue: NSOperationQueue.mainQueue(), completionHandler: { (imageResponce : NSURLResponse!, imageData : NSData!, imageError:NSError!) -> Void in
+                            var image = UIImage(data: imageData)
+                            self.performSegueWithIdentifier("signInToTextSegue", sender: nil)
+                            
+                        })
 
                     })
 

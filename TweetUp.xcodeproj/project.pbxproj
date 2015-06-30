@@ -14,6 +14,8 @@
 		362CC4641B424239004ACD6F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362CC4621B424239004ACD6F /* LaunchScreen.xib */; };
 		362CC4701B424239004ACD6F /* TweetUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362CC46F1B424239004ACD6F /* TweetUpTests.swift */; };
 		362CC47A1B425750004ACD6F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362CC4791B425750004ACD6F /* SignInViewController.swift */; };
+		362CC47C1B426DB6004ACD6F /* AddTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362CC47B1B426DB6004ACD6F /* AddTextViewController.swift */; };
+		362CC47E1B427030004ACD6F /* PublishPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362CC47D1B427030004ACD6F /* PublishPicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		362CC46E1B424239004ACD6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		362CC46F1B424239004ACD6F /* TweetUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetUpTests.swift; sourceTree = "<group>"; };
 		362CC4791B425750004ACD6F /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		362CC47B1B426DB6004ACD6F /* AddTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTextViewController.swift; sourceTree = "<group>"; };
+		362CC47D1B427030004ACD6F /* PublishPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishPicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			children = (
 				362CC4561B424239004ACD6F /* AppDelegate.swift */,
 				362CC4791B425750004ACD6F /* SignInViewController.swift */,
+				362CC47B1B426DB6004ACD6F /* AddTextViewController.swift */,
+				362CC47D1B427030004ACD6F /* PublishPicViewController.swift */,
 				362CC45D1B424239004ACD6F /* Main.storyboard */,
 				362CC4601B424239004ACD6F /* Images.xcassets */,
 				362CC4621B424239004ACD6F /* LaunchScreen.xib */,
@@ -217,7 +223,9 @@
 			files = (
 				362CC45A1B424239004ACD6F /* TweetUp.xcdatamodeld in Sources */,
 				362CC4571B424239004ACD6F /* AppDelegate.swift in Sources */,
+				362CC47E1B427030004ACD6F /* PublishPicViewController.swift in Sources */,
 				362CC47A1B425750004ACD6F /* SignInViewController.swift in Sources */,
+				362CC47C1B426DB6004ACD6F /* AddTextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
