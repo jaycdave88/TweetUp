@@ -10,10 +10,17 @@ import UIKit
 
 class PublishPicViewController: UIViewController {
 
+    var profileImage : UIImage? = nil
+
+    var imageText = ""
+
+      @IBOutlet weak var profilePicImageView: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // yoda say ...
+        
+        self.profilePicImageView.image = self.profileImage
     }
 
 }

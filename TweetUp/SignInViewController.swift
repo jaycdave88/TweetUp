@@ -49,7 +49,7 @@ class SignInViewController: UIViewController {
 
                         NSURLConnection.sendAsynchronousRequest(imageRequest, queue: NSOperationQueue.mainQueue(), completionHandler: { (imageResponce : NSURLResponse!, imageData : NSData!, imageError:NSError!) -> Void in
                             var image = UIImage(data: imageData)
-                            self.performSegueWithIdentifier("signInToTextSegue", sender: nil)
+                            self.performSegueWithIdentifier("signInToTextSegue", sender: image)
                             
                         })
 
@@ -62,6 +62,12 @@ class SignInViewController: UIViewController {
 
         }
         
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) { // segue function that will allow data to be shared to another viewController
+        let addTextViewController = segue.destinationViewController as! AddTextViewController
+        
+        addTextViewController.profileImage = (sender as! UIImage)
     }
 
 }
