@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		362CC4571B424239004ACD6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362CC4561B424239004ACD6F /* AppDelegate.swift */; };
 		362CC45A1B424239004ACD6F /* TweetUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 362CC4581B424239004ACD6F /* TweetUp.xcdatamodeld */; };
-		362CC45C1B424239004ACD6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362CC45B1B424239004ACD6F /* ViewController.swift */; };
 		362CC45F1B424239004ACD6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362CC45D1B424239004ACD6F /* Main.storyboard */; };
 		362CC4611B424239004ACD6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 362CC4601B424239004ACD6F /* Images.xcassets */; };
 		362CC4641B424239004ACD6F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362CC4621B424239004ACD6F /* LaunchScreen.xib */; };
 		362CC4701B424239004ACD6F /* TweetUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362CC46F1B424239004ACD6F /* TweetUpTests.swift */; };
+		362CC47A1B425750004ACD6F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362CC4791B425750004ACD6F /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +31,13 @@
 		362CC4551B424239004ACD6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		362CC4561B424239004ACD6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		362CC4591B424239004ACD6F /* TweetUp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TweetUp.xcdatamodel; sourceTree = "<group>"; };
-		362CC45B1B424239004ACD6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		362CC45E1B424239004ACD6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		362CC4601B424239004ACD6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		362CC4631B424239004ACD6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		362CC4691B424239004ACD6F /* TweetUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		362CC46E1B424239004ACD6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		362CC46F1B424239004ACD6F /* TweetUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetUpTests.swift; sourceTree = "<group>"; };
+		362CC4791B425750004ACD6F /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				362CC4561B424239004ACD6F /* AppDelegate.swift */,
-				362CC45B1B424239004ACD6F /* ViewController.swift */,
+				362CC4791B425750004ACD6F /* SignInViewController.swift */,
 				362CC45D1B424239004ACD6F /* Main.storyboard */,
 				362CC4601B424239004ACD6F /* Images.xcassets */,
 				362CC4621B424239004ACD6F /* LaunchScreen.xib */,
@@ -215,9 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				362CC45C1B424239004ACD6F /* ViewController.swift in Sources */,
 				362CC45A1B424239004ACD6F /* TweetUp.xcdatamodeld in Sources */,
 				362CC4571B424239004ACD6F /* AppDelegate.swift in Sources */,
+				362CC47A1B425750004ACD6F /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>944C3D76-AC4D-43DD-93C9-9AD91D8BAF76</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2F5508B7059D25EF2F2D09BF4BD6B3C3DE88C978</key>
+		<string>https://github.com/jaycdave88/TweetUp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TweetUp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2F5508B7059D25EF2F2D09BF4BD6B3C3DE88C978</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jaycdave88/TweetUp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2F5508B7059D25EF2F2D09BF4BD6B3C3DE88C978</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2F5508B7059D25EF2F2D09BF4BD6B3C3DE88C978</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TweetUp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
