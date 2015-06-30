@@ -159,13 +159,23 @@
                             <constraint firstItem="9oH-rx-az2" firstAttribute="top" secondItem="gjC-9V-aHf" secondAttribute="bottom" constant="20" id="jSF-p8-sD2"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="M0p-Uo-x6D"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="r0Q-Se-qNj">
+                        <barButtonItem key="rightBarButtonItem" title="Update Picture" id="Dbb-Ms-yRx">
+                            <connections>
+                                <action selector="updatePicturePost:" destination="qVf-CM-qNa" id="rAP-Xy-yWJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="profilePicImageView" destination="9oH-rx-az2" id="nka-o7-eQn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvj-o7-cAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1772" y="320"/>
+            <point key="canvasLocation" x="1768" y="320"/>
         </scene>
     </scenes>
 </document>

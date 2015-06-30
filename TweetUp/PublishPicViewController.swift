@@ -6,13 +6,17 @@
 //  Copyright (c) 2015 DEV MODE. All rights reserved.
 //
 
+//
 import UIKit
+import Accounts
+import Social
 
 class PublishPicViewController: UIViewController {
 
     var profileImage : UIImage? = nil
 
     var imageText = ""
+    var twitterAccount : ACAccount? = nil
 
       @IBOutlet weak var profilePicImageView: UIImageView!
 
@@ -29,7 +33,7 @@ class PublishPicViewController: UIViewController {
         image.drawInRect(CGRectMake(0, 0, image.size.width, image.size.height)) // setting the points of where to draw ontop of image 
 
 //        UIColor.blackColor().set() // adding black box
-        UIColor(white: 0, alpha: 0.6).set() // setting a transparent color box 
+        UIColor(white: 0, alpha: 0.6).set() // setting a transparent color box
 
         CGContextFillRect(UIGraphicsGetCurrentContext(), CGRectMake(0, image.size.height-(image.size.height * 0.2) , image.size.width, (image.size.height * 0.2))) // setting the black box on the image
 // adding text to box
@@ -49,4 +53,22 @@ class PublishPicViewController: UIViewController {
         return newImage
     }
 
+    @IBAction func updatePicturePost(sender: AnyObject) { // post picture method
+        let requestApi = NSURL(string: "https://api.twitter.com/1.1/account/update_profile_image.json")
+
+        let picData = UIImagePNGRepresentation(self.profilePicImageView.image) // changes image to NSDATA
+        let base64Image = picData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength) // turn image to base64 image
+
+        let userRequest = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.POST, URL: requestApi, parameters: ["image" : base64Image])
+
+        userRequest.account = self.twitterAccount
+
+        userRequest.performRequestWithHandler({ (response:NSData!, urlResponce:NSHTTPURLResponse!, error:NSError! ) -> Void in
+
+            var error = NSErrorPointer()
+
+            let responseDictonary = NSJSONSerialization.JSONObjectWithData(response, options: NSJSONReadingOptions.MutableLeaves, error: error) as! [String : AnyObject]
+        })
+
+    }
 }
