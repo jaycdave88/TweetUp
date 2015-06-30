@@ -12,6 +12,7 @@ import Social
 
 class SignInViewController: UIViewController {
 
+    var twitterAccount : ACAccount? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +27,18 @@ class SignInViewController: UIViewController {
         account.requestAccessToAccountsWithType(accountType, options: nil) { (granted: Bool, error : NSError!) -> Void in // take the account that we have and request acess to use that account
 
             if granted{
-                println("Access Granted")
 
                 let allAccount = account.accountsWithAccountType(accountType) // grab all multiple twitter account 
 
                 if allAccount.count > 0{
                     let twitterAccount = allAccount.last as! ACAccount // grab the last account in the array
+
+                    self.twitterAccount = twitterAccount
+
                     let requestApi = NSURL(string: "https://api.twitter.com/1.1/account/verify_credentials.json") // create a constant as an NSURL 
                     let userRequest = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, URL: requestApi, parameters: nil) // user request saying the requestAPi is a get method 
                     userRequest.account = twitterAccount
+
                     userRequest.performRequestWithHandler({ (response:NSData!, urlResponce : NSHTTPURLResponse!, error:NSError! ) -> Void in
 
                         var error = NSErrorPointer()
@@ -68,6 +72,8 @@ class SignInViewController: UIViewController {
         let addTextViewController = segue.destinationViewController as! AddTextViewController
         
         addTextViewController.profileImage = (sender as! UIImage)
+        addTextViewController.twitterAccount = self.twitterAccount
+
     }
 
 }
