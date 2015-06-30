@@ -86,7 +86,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5S-Ag-Sz1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5S-Ag-Sz1">
                                 <rect key="frame" x="10" y="129" width="580" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="77" id="1P4-sU-Crk"/>
@@ -117,22 +117,25 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="LNT-f4-FvM">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="obI-HC-2tj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="obI-HC-2tj">
+                            <connections>
+                                <segue destination="qVf-CM-qNa" kind="show" id="QxB-iS-8Sb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="textField" destination="XAe-Af-Lf6" id="30I-7w-xSo"/>
-                        <segue destination="qVf-CM-qNa" kind="show" identifier="addTextToPublishSegue" id="ALS-AX-5Gb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAR-FQ-fdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="320"/>
         </scene>
-        <!--View Controller-->
+        <!--Publish Pic View Controller-->
         <scene sceneID="Tpy-ob-A1a">
             <objects>
-                <viewController id="qVf-CM-qNa" sceneMemberID="viewController">
+                <viewController id="qVf-CM-qNa" customClass="PublishPicViewController" customModule="TweetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gjC-9V-aHf"/>
                         <viewControllerLayoutGuide type="bottom" id="54P-CD-T7q"/>
@@ -151,10 +154,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="9oH-rx-az2" secondAttribute="centerX" id="MN5-Lv-Zzg"/>
                             <constraint firstAttribute="centerX" secondItem="9oH-rx-az2" secondAttribute="centerX" id="OXW-zM-abV"/>
                             <constraint firstItem="9oH-rx-az2" firstAttribute="top" secondItem="gjC-9V-aHf" secondAttribute="bottom" constant="20" id="jSF-p8-sD2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profilePicImageView" destination="9oH-rx-az2" id="nka-o7-eQn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvj-o7-cAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
