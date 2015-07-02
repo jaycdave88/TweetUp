@@ -68,6 +68,19 @@ class PublishPicViewController: UIViewController {
             var error = NSErrorPointer()
 
             let responseDictonary = NSJSONSerialization.JSONObjectWithData(response, options: NSJSONReadingOptions.MutableLeaves, error: error) as! [String : AnyObject]
+
+            if urlResponce.statusCode == 200 {
+                var alertController = UIAlertController(title: "Picture Updated!", message: "Your profile picure was updated successfully!", preferredStyle: UIAlertControllerStyle.Alert)
+                var alertAction = UIAlertAction(title: "Awesome", style: UIAlertActionStyle.Default, handler: nil)
+                alertController.addAction(alertAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
+            } else{
+                var errorAlertController = UIAlertController(title: "Error!", message: "Oops! Looks like your picture was not updated!", preferredStyle: UIAlertControllerStyle.Alert)
+                var errorAlertAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil)
+                errorAlertController.addAction(errorAlertAction)
+                self.presentViewController(errorAlertController, animated: true, completion: nil)
+            }
+
         })
 
     }

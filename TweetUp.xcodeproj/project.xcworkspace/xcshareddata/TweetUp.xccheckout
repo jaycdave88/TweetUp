@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>944C3D76-AC4D-43DD-93C9-9AD91D8BAF76</string>
 	<key>IDESourceControlProjectName</key>
-	<string>TweetUp</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2F5508B7059D25EF2F2D09BF4BD6B3C3DE88C978</key>
 		<string>https://github.com/jaycdave88/TweetUp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TweetUp.xcodeproj</string>
+	<string>TweetUp.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2F5508B7059D25EF2F2D09BF4BD6B3C3DE88C978</key>
